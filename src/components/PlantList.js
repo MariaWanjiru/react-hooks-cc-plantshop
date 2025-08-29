@@ -4,8 +4,8 @@ import PlantCard from "./PlantCard";
 function PlantList({ plants }) {
   return (
     <ul className="cards">
-      {plants.map((plant) => (
-        <PlantCard key={plant.id} plant={plant} />
+      {plants.map((plant, index) => (
+        <PlantCard key={plant.id ?? index} plant={plant} />
       ))}
     </ul>
   );
